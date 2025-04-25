@@ -14,7 +14,8 @@ A simple web-based tool to detect potential rug pull scams in DeFi tokens using 
   - Top wallet holdings
   - Overall risk score
 
----# rugpull-detector
+---
+# rugpull-detector
 ## Tech Stack
 
 - HTML, CSS, JavaScript
