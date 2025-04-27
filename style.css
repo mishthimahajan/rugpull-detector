@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://st.depositphotos.com/5945262/54030/i/450/depositphotos_540301696-stock-photo-rug-pull-cryptocurrency-candle-stick.jpg");
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 50%;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#riskSlide {
+    background-image: url("https://preview.redd.it/aj1ah8k5llq71.png?width=1217&format=png&auto=webp&s=77fcc87401a357043ac9d2dde941366d8c59e691");
+}
+
+#liquiditySlide {
+    background-image: url("https://www.bankrate.com/2023/03/07144201/GettyImages-1357889589.jpeg?auto=webp&optimize=high&crop=16:9&width=912");
+}
+
+#ownershipSlide {
+    background-image: url("https://wp.hacken.io/wp-content/uploads/2023/01/how-to-stay-clear-of-rug-pulls-2.jpg");
+}
+
+#topWalletSlide {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNXpq9vrSTXuffvOCGBOK8DY1-zBTDtPiuoQ&s");
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+header h1 {
+    color: aliceblue;
+
+}
