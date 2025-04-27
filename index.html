@@ -1,98 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rug Pull Detector</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: sans-serif;
-      background:url("https://static.vecteezy.com/system/resources/previews/005/664/533/non_2x/abstract-futuristic-technology-background-of-rug-pull-cryptocurrency-gamefi-and-candle-stick-chart-graph-vector.jpg");
-      background-size: cover;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .form input,
-    .form button {
-      padding: 1rem;
-      margin: 0.5rem;
-      border: none;
-      border-radius: 8px;
-    }
-
-    .form input {
-      width: 60%;
-    }
-
-    .form button {
-      background: #10b981;
-      color: white;
-      cursor: pointer;
-    }
-
-    .slide {
-      display: none;
-      transition: all 0.5s ease;
-    }
-
-    .slide.active {
-      display: block;
-    }jpg
-
-    .result-card {
-      background: url("https://research.checkpoint.com/wp-content/uploads/2023/11/DALL%C2%B7E-2023-11-21-11.52.28-A-dimly-lit-futuristic-office-space-filled-with-high-tech-computer-screens-and-digital-displays-showing-various-cryptocurrency-graphs-and-digital-tok.png");
-      background-size: cover;
-      padding: 1.5rem;
-      border-radius: 12px;
-      margin-top: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rug Pull Detector</title>
+    <link rel="stylesheet" href="project.css">
 </head>
 <body>
-
-  <!-- Slide 1: Token Form -->
-  <div class="container slide active" id="formSlide">
-    <h1>Rug Pull Detection</h1>
-    <p class="subtitle">Check the safety of any crypto token in seconds</p>
-
-    <form id="tokenForm" class="form">
-      <input type="text" id="tokenInput" name="tokenAddress" placeholder="Enter Token Address..." required>
-      <button type="submit">Scan Token</button>
-    </form>
-  </div>
-
-  <!-- Slide 2: Token Risk Report -->
-  <div class="container slide" id="resultSlide">
-    <h2>Token Risk Report</h2>
-    <div class="result-card">
-      <p><strong>Risk Score:</strong> 78/100 (Medium Risk)</p>
-      <p><strong>Contract Verified:</strong> Yes</p>
-      <p><strong>Ownership Renounced:</strong> No</p>
-      <p><strong>Liquidity Locked:</strong> Partially</p>
-      <p><strong>Top Wallet Holds:</strong> 42%</p>
+    <div class="container">
+        <header>
+            <h1>Rug Pull Detector</h1>
+            <input type="text" id="tokenAddress" placeholder="Enter Token Address">
+            <button onclick="getReport()">Scan</button>
+        </header>
+        
+        <div class="slider-container">
+            <div class="slide" id="riskSlide">
+                <div class="content">
+                    <h2>Risk Score</h2>
+                    <p id="riskScore">Loading...</p>
+                </div>
+            </div>
+            <div class="slide" id="liquiditySlide">
+                <div class="content">
+                    <h2>Liquidity Locked</h2>
+                    <p id="liquidity">Loading...</p>
+                </div>
+            </div>
+            <div class="slide" id="ownershipSlide">
+                <div class="content">
+                    <h2>Ownership</h2>
+                    <p id="ownership">Loading...</p>
+                </div>
+            </div>
+            <div class="slide" id="topWalletSlide">
+                <div class="content">
+                    <h2>Top Wallet Holders</h2>
+                    <p id="topWallet">Loading...</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    const form = document.getElementById('tokenForm');
-    const formSlide = document.getElementById('formSlide');
-    const resultSlide = document.getElementById('resultSlide');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Show result slide (you can fetch real data here too)
-      formSlide.classList.remove('active');
-      resultSlide.classList.add('active');
-    });
-  </script>
+    <script src="project.js"></script>
 </body>
 </html>
